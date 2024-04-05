@@ -1,0 +1,204 @@
+/* Заголовки */
+#resume, #full_name, #vacancy {
+	display: block;
+	margin: 10px auto;
+	width: 540px;
+	font-family: sans-serif;
+	
+}
+
+
+/* Краткая информация */
+.brief_info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+img {
+	width: 120px;
+	height: 15%;
+	margin-right: 20px;
+}
+
+
+/* Подробная информация */
+.information {
+	font-weight: bold;
+	font-family: sans-serif;
+}
+
+.value {
+	font-family: sans-serif;
+}
+
+hr {
+	width: 540px;
+}
+
+
+/* Кнопка отобразить/свернуть */
+.collapsible {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 540px;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	display: block;
+	margin: 10px auto;
+}
+
+.active, .collapsible:hover {
+	background-color: #ccc;
+}
+
+.content {
+	display: none;
+	overflow: hidden;
+	font-family: sans-serif;
+	margin: 10px auto;
+	width: 540px;
+}
+
+
+/* Диаграмма навыков */
+* {box-sizing:border-box}
+
+.container_skills {
+	width: 100%; 
+	background-color: #ddd; 
+}
+
+.skills {
+	text-align: right; 
+	padding-top: 10px; 
+	padding-bottom: 10px; 
+	color: white; 
+}
+
+.html {width: 90%; background-color: #04AA6D;} 
+.css {width: 80%; background-color: #2196F3;} 
+.sql {width: 65%; background-color: #FFA500;} 
+.php {width: 60%; background-color: #808080;} 
+.js {width: 50%; background-color: #f44336;} 
+.django {width: 50%; background-color: #4B0082;} 
+
+
+/* Временная шкала опыта работы */
+* {
+	box-sizing: border-box;
+}
+
+.timeline {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.timeline::after {
+	content: '';
+	position: absolute;
+	width: 6px;
+	background-color: #474e5d;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	margin-left: -3px;
+}
+
+.container {
+	padding: 10px 40px;
+	position: relative;
+	background-color: inherit;
+	width: 50%;
+}
+
+.container::after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: -17px;
+	background-color: white;
+	border: 4px solid #FF9F55;
+	top: 15px;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	left: 50%;
+}
+
+.left::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	right: 30px;
+	border: medium solid #474e5d;
+	border-width: 10px 0 10px 10px;
+	border-color: transparent transparent transparent #474e5d;
+}
+
+.right::before {
+	content: " ";
+	height: 0;
+	position: absolute;
+	top: 22px;
+	width: 0;
+	z-index: 1;
+	left: 30px;
+	border: medium solid #474e5d;
+	border-width: 10px 10px 10px 0;
+	border-color: transparent #474e5d transparent transparent;
+}
+
+.right::after {
+	left: -16px;
+}
+
+.content_time {
+	padding: 20px 30px;
+	background-color: white;
+	position: relative;
+	border-radius: 6px;
+	border: medium solid #474e5d;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .container::before {
+    left: 60px;
+    border: medium solid #474e5d;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #474e5d transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
